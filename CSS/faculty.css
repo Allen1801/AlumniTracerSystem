@@ -1,0 +1,132 @@
+main {
+    margin-left: 200px;
+    padding: 50px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+
+main div {
+    max-width: 1200px;
+}
+
+h2 {
+    font-size:clamp(1.5rem, 2.5vw, 1.70rem);
+    letter-spacing: 0.5px;
+}
+
+.affairs {
+    padding:30px 30px;
+    background-color: white;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.affairs-subtitle{
+    color: #777;
+    margin-bottom:20px;
+}
+
+.affairs h2{
+    text-align: center;
+}
+
+.officers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px;
+    margin-bottom: 10px;
+}
+
+.officers-card{
+    background-color: rgb(216, 240, 216);
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+    border-radius: 10px;
+    text-align: center;   
+}
+
+.officers-card img {
+    width:50%;
+}
+
+.officers-card-dean{
+    background-color: rgb(216, 240, 216);
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.officers-card-dean img {
+    width:50%;
+}
+
+.officers-name {
+    font-weight: 800;
+    margin-top:10px;
+}
+
+h1{
+    font-size: clamp(2rem, 3vw, 4rem);
+    color: var(--accentBlackv2);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px){
+    .officers-card {
+        width: 47%;
+    }
+
+    .officers-card-dean {
+        width: 47%;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .officers-card {
+        width: 70%;
+    }
+
+    .officers-card img {
+        width:60%;
+    }
+
+    .officers-card-dean {
+        width: 70%;
+    }
+
+    .officers-card-dean img {
+        width:60%;
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .officers-card {
+        width: 90%;
+    }
+
+    .officers-card img {
+        width:80%;
+    }
+
+    .officers-card-dean {
+        width: 90%;
+    }
+
+    .officers-card-dean img {
+        width:80%;
+    }
+}

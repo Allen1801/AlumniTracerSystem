@@ -1,0 +1,353 @@
+.grid { 
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:30px;
+    max-width:1280px;
+    margin: auto;
+    padding:20px;
+}
+
+/* LANDING DIVISION */
+
+.landing-div{
+    height:80vh;
+    align-content: center;
+}
+
+.welcome-img {
+    grid-column: span 7;
+    width:100%;
+}
+
+.welcome{
+    grid-column: span 5;
+    margin: auto;
+}
+
+.welcome h1 {
+    font-size: clamp(3rem, 4vw, 7rem);
+}
+
+.welcome p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    margin:10px 0;
+}
+
+.welcome button {
+    padding: 10px;
+    width: 30%;
+    margin:10px 5px 0 0;
+    font-weight: 600;
+    font-size:15px;
+    border: 1px solid var(--accentGreen);
+    transition: 0.3s ease-in;
+}
+
+#welcome-button-1{
+    background-color: var(--accentGreen);
+    color: var(--accentWhite);
+}
+
+#welcome-button-2{
+    background-color: var(--accentWhite);
+    color: var(--accentGreen);
+}
+
+#welcome-button-1:hover, #welcome-button-2:hover, .events-card button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 5px #A4C19680;
+}
+
+/*EVENTS DIVISION*/
+.events {
+    background-color: #DEF5D3;
+    padding:25px 0;
+}
+
+.events h2 {
+    margin:2.5vh 0 0.5vh 0;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.slider {
+    grid-column: span 12;
+}
+
+.slider img { 
+    border-radius: 15px;
+}
+
+.cards {
+    grid-column: span 12;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+}
+
+.events-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accentWhite);
+    border-radius: 5px;
+    text-align: center;
+    padding:45px;
+    width: 30%;
+    min-height: 400px;
+    position: relative;
+    box-shadow: 0 0 30px 0 #0000001A;
+    transition: 0.2s ease-in;
+}
+
+.events-card:hover { 
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 0 #ffffff80;
+}
+
+.events-card img{
+    
+    border-radius: 2.5px;
+    object-fit: fill;
+}
+
+.events-card h4 {
+    margin:15px 0;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); 
+}
+
+.events-card p {
+    font-size: clamp(0.75rem, 1.25vw, 1rem);
+    margin-bottom: 15px;
+}
+
+.events-card button {
+    display: inline-block;
+    background-color: var(--accentGreen);
+    color: var(--accentWhite);
+    width:50%;                                       
+    padding:10px 0;
+    margin: auto auto 0 auto;
+    transition: 0.2s ease-in;
+}
+
+/* MISSION */
+.msvs {
+    padding:40px 20px;
+}
+
+.msvs-text {
+    grid-column: span 12;
+    background-color:var(--accentWhite);
+    box-shadow: 0 0 30px 5px #A4C19680;
+    border-radius:10px; 
+    padding:40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+
+.msvs-text h2 {
+    text-align: left;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.msvs-text p {
+    font-size: clamp(0.75rem, 1.25vw, 1rem);    
+    margin:15px 0;
+}
+
+footer {
+    background-color: #A9C89B;
+    padding: 60px;
+}
+
+footer img { 
+    grid-column: 3 / span 2;
+    width:100%;
+    align-self: center;
+}
+
+footer div {
+    grid-column: 6 / span 5;
+}
+
+footer div h4 {
+    font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+    color:var(--accentWhite);
+    line-height: 3rem;
+}
+
+footer div p { 
+    color:var(--accentWhite);
+    line-height: 3rem;
+    font-size: clamp(0.75rem, 1.25vw, 1rem); 
+}
+
+
+@media only screen and (max-width: 1280px){
+    .grid {
+        max-width: 1100px;
+        gap:15px;
+    }
+
+    .landing-div {
+        height: inherit;
+        padding:50px 0;
+    }
+
+    .welcome-img {
+        grid-column: span 6;
+        width:100%;
+    }
+    
+    .welcome{
+        grid-column: 2 / span 4;
+        margin: auto;
+    }
+
+    .slider {
+        grid-column: span 12;
+        margin:0 auto;
+    }
+
+    .events-card {
+        width: 40%;
+        padding:30px;
+        min-height: 350px;
+    }
+
+    footer div { 
+        grid-column: 6 / span 6;
+    }
+
+    footer  img { 
+        grid-column: 2 / span 3;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .grid{
+        max-width: 700px;
+    }
+
+    .landing-div {
+        height: inherit
+    }
+
+    .welcome{
+        grid-column: span 12;
+        text-align: center;
+    }
+    
+    .welcome-img {
+        grid-column: 3 / span 8;
+        padding:20px;
+    }
+    
+    .events-card {
+        width:45%;
+        padding:20px;
+        min-height: 300px;
+    }
+
+    .msvs-text {
+        grid-column: 3 / span 8;
+        margin-bottom: 40px;
+        text-align: center;
+        padding:30px;
+    }
+
+    .msvs-text h2 {
+        text-align: center;
+        padding:0;
+    }
+
+    .msvs-img {
+        display: none;
+    }
+
+    footer { 
+        padding: 20px;
+    }
+
+    footer  img { 
+        grid-column: 5 / span 4;
+        width: 70%;
+        margin: auto;
+    }
+
+    footer div { 
+        grid-column: span 12;
+        text-align: center;
+        margin: auto;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px){
+    
+    .grid { 
+        padding: 1em;
+    }
+
+    .landing-div { 
+        padding: inherit 20px;
+        height:80vh;
+    }
+
+    .welcome button{
+        width:60%;
+    }
+
+    .welcome-img {
+        display: none;
+    }
+
+    .slider {
+        grid-column: span 12;
+        margin-bottom:10px;
+    }
+
+    .events-card {
+        width:90%;
+        padding: 30px;
+    }
+
+    .msvs-text {
+        grid-column: span 12;
+        margin-bottom: 20px;
+        box-shadow: 0 0 15px 2.5px #A4C19680;
+    }
+    
+    footer div p {
+        line-height: 2.5rem;
+        margin:10px 0;
+    }
+}
+
+/* BUTTON UP */
+.arrow-btn{
+    position: fixed;
+    bottom: 80px;
+    right: 15px;
+    z-index: 9;
+  }
+  
+  .arrow-btn a{
+    height: 39px;
+    width: 37px;
+    text-align: center;
+    background:#d8d348;
+    display: block;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .arrow-btn a span{
+    color: #000000;
+    line-height: 39px;
+    font-size: 25px;
+  }

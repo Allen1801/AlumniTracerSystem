@@ -1,0 +1,263 @@
+body {
+    background-color:  rgb(242,242,242);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(122, 187, 117);
+    color: #fff;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    padding:15px 25px;
+}
+
+.sidebar img {
+    margin: 25px;
+    height:70px;
+    align-self: center;
+}
+
+.sidebar a:hover {
+    background-color: rgb(148, 206, 144);
+}
+
+.sidebar a i {
+    width:30%;
+}
+
+.sidebar a span {
+    display: inline;
+}
+
+.profile {
+    display: inline-block;
+    margin: auto auto 25px auto;
+    text-align: center;
+    padding:10px;
+}
+
+.profile p {
+    color: #fff;
+    line-height: 25px;
+}
+
+.profile .batch{
+    font-size:12px;
+}
+
+.profile img {
+    margin:5px 0;
+    object-fit: fill;
+}
+
+.profile a {
+    display:flex;
+    gap:10px;
+}
+
+.burger-icon {
+    display:none;
+}
+
+main {
+    margin-left: 200px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:30px;
+}
+
+main .header{ 
+    grid-column: span 12;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+main .header h1 {
+    font-size: clamp(2rem, 3vw, 4rem);
+    color: var(--accentBlackv2);
+    width:60%;
+}
+
+main .header div {
+    width:40%;
+    background-color: transparent;
+    display: none;
+    font-size: clamp(1rem, 1vw, 1.2rem)
+}
+
+main div {
+    background-color: white;
+    border-radius: 15px;
+    padding:20px;
+}
+
+@media only screen and (max-width: 800px){
+    .sidebar {
+        left:-100vw;
+    }
+
+    .sidebar .logo {
+        display: none;
+    }
+
+    .sidebar i {
+        display: none;
+    }
+
+    .sidebar .actions {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar.show {
+        left:0;
+        width:100vw;
+    }
+
+    .sidebar.show + .burger-icon{
+        color:#fff;
+    }
+
+    .burger-icon {
+        display:flex;
+        position: absolute;
+        right:40px;
+        top:20px;
+        font-size:25px;
+        z-index: 999;
+    }
+
+    .profile a {
+        display:flex;
+        justify-content: center;
+    }
+
+    main {
+        margin:50px 0 0 0;
+        padding: 30px;
+    }
+
+    main .header h1 { 
+        white-space: nowrap;
+    }
+    
+}
+
+@media only screen and (max-width: 550px){
+    .burger-icon {
+        right:20px;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+        padding:1em;
+        gap:0.5em;
+    }
+
+}
+
+@media only screen and (max-width: 380px){
+    main .header h1 {
+        white-space: initial;
+    }
+}
+
+/* LOGOUT */
+.popup {
+    width: 80%;
+    padding: 15px;
+    left: 0;
+    margin-left: 10%;
+    border: 1px solid rgb(1,82,73);
+    border-radius: 10px;
+    color: rgb(1,82,73);
+    background: white;
+    position: absolute;
+    top: 15%;
+    box-shadow: 5px 5px 5px #000;
+    z-index: 10001;
+    font-weight: 700;
+    text-align: center;
+    height: 200px;
+    padding-top: 50px;
+    margin-top: 150px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+  }
+  
+.overlay {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.85);
+    z-index: 10000;
+    display :none;
+    border-radius: 0%;
+  }
+  
+.dialog-btn {
+    background-color:#44B78B;
+    color: white;
+    font-weight: 700;
+    border: 1px solid #44B78B;
+    border-radius: 5px;
+    height: 30px;
+    width: 130px;
+  }
+
+.dialog-btn:hover {
+    background-color:#015249;
+    cursor: pointer;
+  }
+
+.message {
+    padding-bottom: 20px
+  }
+
+#cancel {
+    background-color: #d64545;
+    border: 1px solid #d64545;
+  }
+
+@media (min-width: 550px) {
+    .popup {
+      width: 66.66666666%;
+      margin-left: 16.666666%;
+    }
+  }
+@media (min-width: 992px) {
+    .popup {
+      width: 80%;
+      margin-left: 25%;
+    }
+  }
+@media (min-width: 1200px) {
+    .popup {
+      width: 33.33333%;
+      margin-left: 33.33333%;
+    }
+  }

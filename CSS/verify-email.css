@@ -1,0 +1,153 @@
+.full{
+    height:100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    flex-grow: 1;
+    max-width:800px;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+    padding:30px;
+    flex-direction: column;
+}
+
+.container a {
+    font-size: 12px;
+    margin-bottom:15px;
+    text-align: center;
+    color:#888;
+}
+
+.container a:hover {
+    color: var(--accentGreen);
+}
+
+.container img {
+    display:none;
+}
+
+.container h2{
+    text-align: center;
+    font-size:clamp(1.5rem, 2.5vw, 2.5rem);
+    margin-bottom:10px;
+}
+
+form {
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:15px;
+}
+
+form h3 {
+    grid-column: span 12;
+    margin-top:15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.form-input{
+    grid-column: span 12;
+    display: flex;
+    align-items: center;
+    padding:15px 20px;
+    background-color: rgb(242,242,242);
+    border-radius: 10px;
+}
+
+
+.form-input span{
+    padding:0 10px;
+    color: var(--accentGreen);
+}
+
+.form-input p {
+    padding:0 15px;
+}
+
+.form-input input {
+    border:none;
+    background-color: transparent;
+    outline: none;
+    text-indent: 15px;
+    width:80%;
+}
+
+form button {
+    grid-column: 3/ span 8;
+    font-size: 15px;
+    margin:20px 0;
+    padding:10px 0;
+    background-color: #acd4a8;
+    color:white;
+    transition: 0.2s ease-in;
+}
+
+.container form button:hover{
+    background-color: var(--accentGreen);
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+
+    .form-input {
+        grid-column: span 12;
+    }
+
+    .form-input:nth-child(4), .form-input:nth-child(5){
+        grid-column: span 6;
+    }
+
+    .blur-bg {
+        display: none;
+    }
+
+    .container img {
+        display: initial;
+        width:60%;
+        margin: auto;
+        margin-bottom:15px;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
+    form button {
+        margin:5px;
+        grid-column: span 12;
+    }
+
+    .container h2{
+        margin-bottom:5px;
+    }
+}
+
+
+@media only screen and (max-width: 390px){
+
+    .container{
+        padding:20px;
+    }
+
+    .form-input {
+        padding:15px 10px;
+    }
+
+    .form-input span {
+        padding: 0 5px;
+    }
+
+    .form-input p {
+        padding:0 5px;
+    }
+    
+    form button {
+        margin:5px;
+        grid-column: span 12;
+    }
+}

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@700;800&display=swap');
+
+main {
+    margin-left: 200px;
+    padding: 50px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    gap:30px;
+    padding:50px 100px;
+}
+
+.slides img{
+    border-radius: 10px;
+}
+
+/*WELCOME */
+.welcome {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:25px;
+
+}
+
+.welcome-content{
+    grid-column: span 8;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    padding:15px 50px;
+    border-radius: 10px;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.welcome-content div {
+    width:60%;
+}
+
+h2 {
+    font-size:clamp(1.5rem, 2.5vw, 1.70rem);
+}
+
+.welcome-content p {
+    color: #777;
+    line-height: 2rem;
+    margin-top:5px;
+    font-size: 13px;
+}
+
+.welcome-content .greet {
+    margin-top:20px;
+    color: #999;
+}
+
+.active-count {
+    border-radius: 10px;
+    grid-column: span 4;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#date {
+    font-size: clamp(3rem, 2vw, 4rem);
+    color: var(--accentGreen);
+}
+
+#day {
+    line-height: 2rem;
+}
+
+
+/*MAKE A GIFT*/
+.gift {
+    background: white;
+    border-radius: 10px;
+    padding:30px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.gift h2 { 
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1rem;
+}
+
+.gift-content { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.gift-content div {
+    width:50%;
+    margin:15px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:15px;
+}
+
+.gift-content pre {
+    font-size:13px;
+    line-height: 1.5rem;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+.gift-content img {
+    width:40%;
+    border-radius: 5px;
+}
+
+/* DONATION LINKS*/
+.donate-title {
+    margin-top:15px;
+    text-align: center;
+}
+
+.donation { 
+    display: flex;
+    flex-wrap: wrap;
+    gap:40px;
+    padding:10px 40px;
+    justify-content: center;
+}
+
+.donation div {
+    width:120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donation img {
+    width: 80%;
+}
+
+.donation p{
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+/*ABOUT*/
+
+.about{
+    background-color: white;
+    padding:25px 40px;
+    border-radius: 15px;
+}
+
+.about h2{
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1rem;
+}
+
+.about p{
+    margin:auto;
+    width:80%;
+    text-align: center;
+    font-size:13px;
+}
+
+.about p:nth-child(3){
+    text-align:right;
+}
+
+@media only screen and (max-width: 1200px){
+    .welcome-content {
+        grid-column: span 12;
+    }
+
+    .active-count {
+        display:none;
+    }
+
+    
+    .gift-content img {
+        width:70%;
+    }
+
+    .gift-content {
+        flex-direction: column-reverse;
+    }
+
+    .gift-content div {
+        text-align: center;
+        width:80%;
+    }
+
+}
+
+@media only screen and (max-width: 744px){
+    .welcome-content {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+        padding:15px 20px;
+    }
+
+    .welcome-content div {
+        width:80%;
+    }
+
+    .welcome-content img {
+        width:60%;
+    }
+
+    .gift {
+        background: white;
+        border-radius: 10px;
+        padding:30px 10px;
+    }
+
+    .about{
+        background-color: white;
+        padding:25px 20px;
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .welcome {
+        grid-template-columns: 1fr;
+        gap:5px;
+    }
+
+    .gift {
+        background: white;
+        border-radius: 10px;
+        padding:30px 5px;
+    }
+
+    .gift-content img {
+        width:90%;
+    }
+
+}

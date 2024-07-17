@@ -1,0 +1,152 @@
+header {
+    width: 100%;
+    background-color: #f3f3f3;
+    
+}
+
+.container {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    padding: 1em;
+    max-width:1280px;
+    margin:auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h3{
+    font-size: clamp(0.95rem, 2.6vw, 1.3rem); 
+    margin:0 15px;
+    color:var(--accentGreen);
+}
+
+.logo img {
+    max-width:7%;
+}
+
+.hamburger {
+    display:none;
+}
+
+.nav-bar ul{ 
+    display:flex;
+}
+
+.nav-bar ul li a {
+    font-size: clamp(0.85rem, 2.3vw, 1rem); 
+    padding: 0.45em 0.95em;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: 0.4s ease-in;
+}
+
+.nav-bar ul li a:hover {
+    background-color: var(--accentGreen);
+    color:var(--accentWhite);
+}
+
+#loginButton {
+    color:var(--accentGreen);
+}
+
+#loginButton:hover {
+    color:var(--accentWhite);
+}
+
+h2 {
+    grid-column: span 12;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1280px){
+    .container { 
+        max-width:1100px;
+    }
+
+    .logo img {
+        max-width:10%;
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+
+    .container {
+        max-width: 650px;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .logo h3{
+        margin:0;
+    }
+
+    .hamburger{
+        display:block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 25px;
+        height:2px;
+        background: var(--accentGreen);
+        margin: 6px 0;
+        border-radius: 10px;
+    }
+
+    .nav-bar.active { 
+        top:50px;
+        z-index: 1
+    }
+
+    .nav-bar { 
+        z-index: -1;
+        position:absolute;
+        top:-200px;
+        left:0;
+        right:0;
+        transition:0.25s ease-out;
+        overflow:hidden;
+        background-color: #f3f3f3;
+    }
+
+    .grid {
+        z-index:-2;
+    }
+
+    .nav-bar ul {
+        display:block;
+        width:fit-content;
+        margin: auto;
+        padding: 10px 0;
+        text-align: center;
+        transition:0.3s ease-out;
+
+    }
+
+    .nav-bar ul li {
+        margin: 25px 0;
+    }
+}
+
+
+@media only screen and (max-width: 320px){
+    .hamburger .line {
+        width:20px;
+        height:1px;
+    }
+
+    .logo h3{
+        font-size: 0.75rem;
+    }
+    
+}
+
+

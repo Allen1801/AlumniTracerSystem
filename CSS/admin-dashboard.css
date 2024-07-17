@@ -1,0 +1,228 @@
+/*WELCOME */
+.welcome {
+    grid-column: span 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome h2 {
+    font-size:clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.welcome p {
+    color: #777;
+    line-height: 2rem;
+    margin-top:5px;
+}
+
+
+.welcome .greet {
+    margin-top:30px;
+    color: #999;
+}
+
+
+
+/*TIME AND DATE*/
+
+.time-date {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#date {
+    font-size: clamp(2rem, 2vw, 3rem);
+    color: var(--accentGreen);
+}
+
+#day {
+    line-height: 2rem;
+}
+
+#time {
+    font-size: clamp(1.8rem, 1.8vw, 2.5rem);
+    line-height: 5rem;
+}
+
+
+/*COLLEGES*/
+.colleges { 
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+}
+
+.colleges h2{
+    text-align: center;
+    font-size:clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.colleges-active{
+    text-align: center;
+    color: #777;
+    font-size:clamp(1rem, 1vw, 1.2rem); 
+    margin:5px 0 20px 0 ;
+}
+
+.colleges-div {
+    width:100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px;
+}
+
+.colleges-div .container {
+    width: 30%;
+    background-color: rgb(216, 240, 216);
+    transition: 0.3s ease-in;
+}
+
+.colleges-div .container:hover {
+    transform: scale(1.05);
+    background-color: rgb(148, 206, 144);
+}
+
+.colleges-div .container:hover p{
+    color:white;
+}
+
+.colleges-div .container a{
+    display: flex;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p{
+    font-weight: 600;
+    margin-left: 20px;
+    color: var(--accentBlackv2);
+    transition: 0.5s ease-in;
+}
+
+.colleges .container img {
+    width:30%;
+    object-fit: fill;
+}
+
+
+/*OVERVIEW  */
+.overview {
+    grid-column: span 12;
+    padding:50px;
+}
+
+.overview h2 {
+    font-size:clamp(1.5rem, 2.5vw, 2.5rem);
+    margin:15px 0;
+}
+
+.overview p {
+    line-height: 2rem;
+    margin: 20px 0;
+}
+
+/*MEDIA CONTROL */
+
+@media only screen and (max-width: 1500px){
+    .colleges-div .container a{
+        flex-direction: column;
+        text-align: center;
+        padding:15px;
+    }
+
+    .container p{
+        margin:15px 0;
+    }
+
+    .colleges .container img {
+        width:40%;
+    }
+
+    main .header {
+        padding:0;
+    }
+}
+
+
+@media only screen and (max-width: 1200px){
+
+    .welcome {
+        grid-column: span 12;
+    }
+
+    .time-date {
+        display: none;
+    }
+
+    main .header div {
+        display: flex;
+        align-items: center;
+        justify-content:right;
+    }
+
+    main .header {
+        padding:0;
+    }
+
+    .colleges {
+        padding :30px;
+    }
+
+    .colleges-div .container {
+        width:45%;
+    }
+
+    .colleges-div .container a{
+        padding:10px;
+    }
+
+    .colleges .container img {
+        width:50%;
+    }
+}
+
+
+
+@media only screen and (max-width: 550px){
+    main .header {
+        margin-bottom: 15px;
+    }
+
+    #header-date {
+        display: none;
+    }
+
+    .welcome {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .colleges-div .container {
+        width:80%;
+    }
+
+    .colleges {
+        padding :25px;
+    }
+
+}
+
+@media only screen and (max-width: 390px){
+
+    .welcome {
+        padding: 0.5em;
+    }
+
+    .colleges-div .container {
+        width:100%;
+    }
+
+}

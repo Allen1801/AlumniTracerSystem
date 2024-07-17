@@ -1,0 +1,434 @@
+/*COLLEGES CONTACTS*/
+button {
+    transition: .2s ease-in;
+}
+
+.announcement-buttons button:hover,  .slider-button:hover{
+    background-color: var(--accentGreen);
+}
+
+.colleges-contacts { 
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+}
+
+.colleges-contacts h2, .announcement h2, .slider-announcement h2{
+    text-align: center;
+    width: 100%;
+    font-size:clamp(1.5rem, 2.5vw, 2.5rem);
+    margin-bottom: 30px;
+}
+
+.colleges-active{
+    text-align: center;
+    color: #777;
+    font-size:clamp(1rem, 1vw, 1.2rem); 
+    margin:5px 0 20px 0 ;
+}
+
+.colleges-div {
+    width:100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px;
+}
+
+.colleges-div .container {
+    width: 30%;
+    background-color: rgb(216, 240, 216);
+    transition: 0.3s ease-in;
+}
+
+.colleges-div .container:hover {
+    transform: scale(1.05);
+    background-color: rgb(148, 206, 144);
+}
+
+.colleges-div .container:hover p{
+    color:white;
+}
+
+.colleges-div .container a{
+    display: flex;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p{
+    font-weight: 600;
+    margin-left: 20px;
+    color: var(--accentBlackv2);
+    transition: 0.5s ease-in;
+}
+
+.colleges-contacts .container img {
+    width:30%;
+    object-fit: fill;
+}
+
+
+/* ANNOUNCEMENTS */
+.announcement { 
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+}
+
+.announcement form {
+    display:flex;
+    flex-direction: column;
+    padding:0 50px;
+}
+
+.announcement input[type="text"], .announcement textarea {
+    border-radius: 5px;
+    background-color: var(--accentWhite);
+    border:2px solid #ccc;
+    padding: 20px 15px; 
+    margin-bottom: 25px;
+    text-indent: 30px;
+    font-size: 16px;
+}
+
+.announcement textarea {
+    height:300px;
+}
+
+.announcement p {
+    font-weight: 700;
+    font-size:16px ;
+}
+
+.announcement-buttons {
+    padding:0;
+    display: flex;
+    justify-content: space-between;
+    margin:5px 0;
+}
+
+.announcement-buttons button {
+    padding:15px 20px; 
+    background-color:  rgb(148, 206, 144);
+    color:white; 
+    font-weight: 700;
+}
+
+/* SLIDER */
+.slider-announcement {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+}
+
+hr {
+    margin-bottom:25px; 
+    width:90%;
+}
+
+.slider-button {
+    padding:15px 20px; 
+    background-color:  rgb(148, 206, 144);
+    color:white;
+    font-weight: 700;
+}
+
+label{
+    padding:15px 20px; 
+    background-color:  rgb(148, 206, 144);
+    color:white; 
+    font-weight: 700;
+}
+
+#preview{
+    width: 40%;
+}
+
+#submit-slider{
+    padding:15px 20px; 
+    background-color:  rgb(148, 206, 144);
+    color:white; 
+    font-weight: 700;
+}
+
+.preview-space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* TABLE */
+
+
+table {
+    width:100%;
+    margin:15px 0px;
+    border-spacing:0.5em;
+}
+
+table th, table td {
+    text-align: left;
+    padding:20px;
+    text-align: center;
+}
+
+table td {
+    border: 1px solid #919090;
+}
+
+table td {
+    font-weight: 800;
+    font-size:20px;
+}
+
+table th{
+    background-color: rgb(148, 206, 144);
+    font-size:18px;
+    color:white;
+}
+
+table button:hover{
+    cursor:pointer;
+}
+
+.table-button {
+    padding:15px 20px;
+    background-color: #dab335;
+    color: white;
+}
+
+.table-button:hover {
+    background-color: #a18424;
+}
+
+table img {
+    width:70%;
+}
+
+.upload-btn{
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.upload-btn:hover{
+    cursor: pointer;
+    background-color:rgb(56, 95, 54);
+}
+
+#submit-slider:hover{
+    background-color:rgb(56, 95, 54);
+}
+
+.slider-buttons{
+    padding:0;
+    display: flex;
+    justify-content: space-between;
+    margin:5px 0;
+}
+
+/* MEDIA CONTROL FOR TABLE */
+
+@media only screen and (max-width: 1200px){
+    table {
+        width:100%;
+    }
+
+    table th, table td {
+        padding:10px 5px;
+        font-size:16px;
+    }
+
+    .table-button {
+        padding:10px; 
+        font-size:14px;
+    }
+
+    table img {
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    
+    table thead {
+        display: none;
+    }
+
+    table tr:nth-child(even){
+        background-color: white;
+
+    }
+
+    table, table tbody, table tr, table td {
+        display:block;
+        width:100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid black;
+    }
+
+    table td {
+        padding-left: 50%;
+        position: relative;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left:0;
+        width:50%;
+        padding-left:15px;
+        font-size:16px;
+        font-weight: bold;
+        text-align: left;
+        color: var(--accentGreen);
+    }
+
+}
+
+
+/*MEDIA CONTROL */
+
+@media only screen and (max-width: 1500px){
+    .colleges-div .container a{
+        flex-direction: column;
+        text-align: center;
+        padding:15px;
+    }
+
+    .container p{
+        margin:15px 0;
+    }
+
+    .colleges-contacts .container img {
+        width:40%;
+    }
+
+    main .header {
+        padding:0;
+    }
+}
+
+
+@media only screen and (max-width: 1200px){
+
+    .welcome {
+        grid-column: span 12;
+    }
+
+    .time-date {
+        display: none;
+    }
+
+    main .header div {
+        display: flex;
+        align-items: center;
+        justify-content:right;
+    }
+
+    main .header {
+        padding:0;
+    }
+
+    .colleges-contacts {
+        padding :30px;
+    }
+
+    .colleges-div .container {
+        width:45%;
+    }
+
+    .colleges-div .container a{
+        padding:10px;
+    }
+
+    .colleges-contacts .container img {
+        width:50%;
+    }
+
+    .announcement {
+        padding:40px;
+    }
+
+    .announcement form {
+        padding:0 20px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 550px){
+    main .header {
+        margin-bottom: 15px;
+    }
+
+    #header-date {
+        display: none;
+    }
+
+    .welcome {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .colleges-div .container {
+        width:80%;
+    }
+
+    .colleges-contacts {
+        padding :25px;
+    }
+
+    .announcement {
+        padding: 35px   ;
+    }
+    
+    .announcement input[type="text"], .announcement textarea {
+        border-radius: 5px;
+        background-color: var(--accentWhite);
+        border:2px solid #ccc;
+        padding: 15px 10px; 
+        margin-bottom: 25px;
+        text-indent: 10px;
+        font-size: 14px;
+    }
+
+    .announcement textarea {
+        height:300px;
+    }
+
+}
+
+@media only screen and (max-width: 390px){
+
+    .welcome {
+        padding: 0.5em;
+    }
+
+    .colleges-div .container {
+        width:100%;
+    }
+
+    .announcement { 
+        padding: 25px 20px;
+    }
+    
+
+    .announcement form {
+        padding:0;
+    }
+
+}

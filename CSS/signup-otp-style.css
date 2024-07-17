@@ -1,0 +1,109 @@
+.blur-bg {
+    background-image: url("../Images/bg-login.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+}
+
+
+.full {
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.container {
+    flex-grow: 1;
+    margin: auto;
+    max-width: 500px;
+    border-radius: 20px;
+    padding:30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+    background-color: var(--accentWhite);
+    box-shadow: 0 0 10px 10px rgb(109, 109, 109, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap:15px;
+}
+
+form button { 
+    margin-top:10px;
+    padding:10px 15px;
+    background-color: #acd4a8;
+    color:white;
+    transition: .3s ease-in;
+}
+
+form button:hover {
+    background-color: var(--accentGreen);
+}
+
+form p {
+    font-size:15px;
+}
+
+.resend { 
+    color: rgb(18, 136, 34);
+    font-weight: 800;
+}
+
+.input-field {
+    display:flex;
+    gap:10px;    
+}
+
+.input-field input {
+    width:80px;
+    height:80px;
+    border-radius: 5px;
+    border: 1px solid rgb(232, 232, 232);
+    background-color:rgb(232, 232, 232); 
+    font-size:40px;
+    text-align: center;
+    color: var(--accentGreen);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+@media only screen and (max-width: 500px){
+    h2 { 
+        font-size: 20px;
+    }
+
+    .container {
+        padding:20px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .input-field input {
+        width:60px;
+        height:60px;
+    }
+}

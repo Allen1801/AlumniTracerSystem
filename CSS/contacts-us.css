@@ -1,0 +1,357 @@
+main {
+    margin-left: 200px;
+    padding: 50px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+
+main div {
+    max-width: 1200px;
+}
+
+h2 {
+    font-size:clamp(1.5rem, 2.5vw, 1.70rem);
+    letter-spacing: 0.5px;
+}
+
+.affairs {
+    padding:30px 30px;
+    background-color: white;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.affairs-subtitle{
+    color: #777;
+    margin-bottom:20px;
+}
+
+.affairs h2{
+    text-align: center;
+}
+
+.officers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px;
+}
+
+.officers-card{
+    background-color: rgb(216, 240, 216);
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.officers-card img {
+    width:50%;
+}
+
+.officers-name {
+    font-weight: 800;
+    margin-top:10px;
+}
+
+h1{
+    font-size: clamp(2rem, 3vw, 4rem);
+    color: var(--accentBlackv2);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/*FACULTIES */
+.faculties{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content: center;
+    padding:50px;
+    border-radius: 15px;
+    gap:15px;
+}
+
+.faculties h2 {
+    width:100%;
+    text-align: center;
+    line-height: 0;
+    margin-bottom:15px;
+}
+
+.faculties-div {
+    width:calc(100% / 2 - 15px);
+    background-color: rgb(216, 240, 216);
+    border-radius: 15px;
+    padding:20px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.faculties-div button{
+    background-color: transparent;
+    color: white;
+}
+
+.faculties-div p:nth-child(1) {
+    font-weight: 800;
+}
+
+.faculties-div img {
+    width:30%;
+    margin:0 20px;
+}
+
+.tel {
+    font-size: 13px;
+}
+
+.try {
+    margin-bottom: 15px;
+}
+
+.faculties-div a {
+    padding:7.5px 20px;
+    background-color: rgb(125, 141, 125);
+    color:white;
+    border-radius: 5px;
+    font-size:13px;
+    transition: .3s ease-in;
+}
+
+.faculties-div a:hover {
+    background-color: var(--accentGreen);
+}
+
+/* CONCERNS */
+
+.concerns {
+    width:100%;
+    padding:30px 60px;
+    border-radius: 15px;
+    gap:15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.concerns h2 {
+    width: 100%;
+    margin-bottom:10px;
+}
+
+.concern {
+    display: flex;
+    width:calc(100 / 3 - 15px);
+    align-items: center;    
+    font-size:13px;
+}
+
+.concern p:nth-child(1){
+    font-weight: 800;
+}
+
+.line-concern {
+    width:7.5px;
+    border-radius: 10px;
+    height:110%;
+    margin-right:10px;
+    background-color: var(--accentGreen);
+}
+
+/*COLLEGES*/
+.colleges { 
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content: center;
+    padding:50px;
+    border-radius: 15px;
+    gap:15px;
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+}
+
+.colleges h2{
+    text-align: center;
+    font-size:clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.colleges-active{
+    text-align: center;
+    color: #777;
+    font-size:clamp(1rem, 1vw, 1.2rem); 
+    margin:5px 0 20px 0 ;
+}
+
+.colleges-div {
+    width:100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px;
+    
+}
+
+.colleges-div .container {
+    width: 30%;
+    background-color: rgb(216, 240, 216);
+    transition: 0.3s ease-in;
+    border-radius: 5px;
+}
+
+.colleges-div .container:hover {
+    transform: scale(1.05);
+    background-color: rgb(148, 206, 144);
+}
+
+.colleges-div .container:hover p{
+    color:white;
+}
+
+.colleges-div .container a{
+    display: flex;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p{
+    font-weight: 600;
+    margin-left: 20px;
+    color: var(--accentBlackv2);
+    transition: 0.5s ease-in;
+}
+
+.colleges .container img {
+    width:30%;
+    object-fit: fill;
+}
+
+@media only screen and (max-width: 1310px){
+    
+    .faculties-div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .faculties-div img {
+        margin-bottom: 10px;
+    }
+
+    .faculties-div div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .faculties-div a{
+        display: inline-block;
+        margin: auto auto 0 auto;
+    }
+
+    .colleges-div .container a{
+        flex-direction: column;
+        text-align: center;
+        padding:15px;
+    }
+
+    .container p{
+        margin:15px 0;
+    }
+
+    .colleges .container img {
+        width:40%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+
+    .faculties {
+        padding:50px 30px;
+    }
+    .officers-card {
+        width: 47%;
+    }
+
+    .faculties-div img {
+        width:50%;
+    }
+
+    .concerns{
+        justify-content: left;
+    }
+
+    .colleges {
+        padding :30px;
+    }
+
+    .colleges-div .container {
+        width:45%;
+    }
+
+    .colleges-div .container a{
+        padding:10px;
+    }
+
+    .colleges .container img {
+        width:50%;
+    }
+
+}
+
+@media only screen and (max-width: 650px){
+    .officers-card {
+        width: 70%;
+    }
+
+    .officers-card img {
+        width:60%;
+    }
+
+    .faculties-div{
+        width:100%;
+    }
+
+    .faculties-div img{ 
+        width:50%;
+    }
+
+    .concerns{
+        padding:30px 20px;
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .officers-card {
+        width: 90%;
+    }
+
+    .officers-card img {
+        width:80%;
+    }
+
+    .faculties-div img {
+        width:60%;
+    }
+
+    .concerns p:nth-child(2){
+        font-size:12px;
+    }
+
+    .colleges-div .container {
+        width:100%;
+    }
+
+}

@@ -1,0 +1,177 @@
+.logs-table {
+    grid-column: span 12;
+    padding:70px;
+}
+
+.logs-table table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: left;
+    padding:20px;
+}
+
+table td {
+    word-wrap: break-word;
+}
+
+table td:nth-child(3){
+    word-break: break-word;
+}
+
+table th{
+    background-color: var(--accentGreen);
+    font-size:18px;
+    color:white;
+}
+
+table tr:nth-child(even){
+    background-color: rgb(228, 248, 228);
+}
+
+table button {
+    padding:10px 15px;
+    background-color: var(--accentGreen);
+    color: var(--accentWhite);
+}
+
+.btn-archive{
+    background-color: rgb(203, 182, 64)
+}
+
+.btn-delete{
+    background-color: rgb(223, 54, 21)
+}
+
+table button:hover{
+    cursor:pointer;
+}
+
+table a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+option:first {
+    color: #999;
+}
+
+option {
+    width:50%;
+}
+
+.search-form {
+    max-width: 8500px;
+    padding:0;
+    margin-bottom: 25px;
+}
+
+.search-form form{
+    gap:10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-field{
+    background-color: rgb(242,242,242);
+    border:2px solid rgb(242,242,242);
+    border-radius: 5px;
+    padding:15px 20px;
+    word-wrap: break-word;
+
+}
+
+.input-field1{
+    width: 60%;
+}
+
+.input-field2 {
+    width:20%;
+}
+
+#export {
+    background-color: var(--accentGreen);
+    color: white;
+    padding:10px 20px;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1200px){
+    .logs-table {
+        padding:40px;
+    }
+
+    table th, table td {
+        padding:15px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .logs-table{
+        padding:30px;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr:nth-child(even){
+        background-color: white;
+
+    }
+
+    table, table tbody, table tr, table td {
+        display:block;
+        width:100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid black;
+    }
+
+    table td {
+        padding-left: 50%;
+        position: relative;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left:0;
+        width:50%;
+        padding-left:15px;
+        font-size:16px;
+        font-weight: bold;
+        text-align: left;
+        color: var(--accentGreen);
+    }
+
+    .input-field1 {
+        width:100%;
+    }
+
+    .input-field2 {
+        width:70%;
+    }
+
+}
+
+@media only screen and (max-width: 380px){
+    main .header {
+        padding:0;
+        margin-bottom:15px;
+    }
+    main .header h1 {
+        white-space: nowrap;
+    }
+
+    .logs-table{
+        padding:10px;
+    }
+}

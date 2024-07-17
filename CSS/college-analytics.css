@@ -1,0 +1,211 @@
+.colleges-div { 
+    grid-column: span 12;
+    padding:70px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.overall-bg { 
+    grid-column: span 12;
+    display:flex;
+    gap:15px;
+    align-items: center;
+    padding:10px 20px;
+    background-color: var(--accentGreen);
+}
+
+.overall-bg img { 
+    width:60px;
+}
+
+.overall-bg p {
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+}
+
+.act{
+    display: flex;
+    align-items:end;
+}
+
+.act p:nth-child(1){
+    font-weight: 800;
+    font-size: 18px;
+}
+
+
+form { 
+    display:flex;
+    flex-wrap: wrap;
+    align-items: end;
+    padding:0 20px;
+    gap: 20px;
+}
+
+form div{
+    padding:0;
+}
+
+form select {
+    width:100%;
+    padding:7.5px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(242,242,242);
+    background-color: rgb(242,242,242);
+}
+
+.search-container {
+    display: flex;
+    gap:15px;
+}
+
+form button { 
+    display: flex;
+    align-items: center;
+    height:39px;
+    padding:10px 15px;
+    background-color: rgb(122, 187, 117);
+    color: white;
+    gap:10px;
+}
+
+form button:hover{
+    background-color:rgb(47, 98, 44);
+}
+
+
+
+/* CANVAS */
+.course-label { 
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--accentGreen);
+    padding:10px 0;
+}
+
+.canvas-container {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding:0;
+    margin: 0;
+}
+
+.canvas-div {
+    width:50%;
+}
+
+.canvas-div-one, .canvas-div-two {
+    display: flex;
+    object-fit: contain;
+    grid-template-columns: repeat(12, 1fr);
+    flex-direction: column;
+    gap:10px 15px;
+    margin: auto;
+    width: 80%;
+}
+
+.canvas-div-one .legend-two, .canvas-div-two .legend-two{
+    grid-column: span 12;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+
+.canvas-div-one .legend-two .label-one, .canvas-div-one .legend-two .label-two,
+.canvas-div-two .legend-two .label-one, .canvas-div-two .legend-two .label-two{
+    grid-column: span 6;
+    width:50%;
+    margin: 0;
+    text-align: center;
+}
+
+#myChart2017{
+    border-radius: 5px;
+    padding:10px 15px;
+}
+
+#myChart2017-unemp, #myChart2017-city{
+    width:80%;
+    align-self: center;
+    margin-bottom:15px;
+}
+
+#myChart2017-align{
+    border-radius: 5px;
+    padding:10px 15px;  
+}   
+
+.legend{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.legend-one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.legend-two{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1500px){
+    .colleges-div { 
+        padding:30px;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .canvas-container {
+        justify-content: center;
+    }
+    .canvas-div{
+        width:70%;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1150px){
+    .colleges-div { 
+        padding:10px;
+    }
+
+    .canvas-container, .canvas-div {
+        padding:0;
+    }
+
+    #myChart2017-unemp, #myChart2017-city{
+        width:100%;
+        margin-bottom:15px;
+    }
+
+    .canvas-div-one, .canvas-div-two {
+        gap:0;
+    }
+    .canvas-div-one .legend-two,  .canvas-div-two .legend-two {
+        flex-direction: column;
+        margin:0;
+        padding:0;
+    }
+
+    .canvas-div-one .legend-two .label-one, .canvas-div-one .legend-two .label-two,
+    .canvas-div-two .legend-two .label-one, .canvas-div-two .legend-two .label-two{
+        width:100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px){
+    #myChart2017,     #myChart2017-align{ 
+        height:1000px;
+    }
+}

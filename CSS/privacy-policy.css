@@ -1,0 +1,174 @@
+body {
+    background-color: #f3f3f3;
+
+}
+
+header {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+.container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 0em 2em;
+    max-width:1280px;
+    margin:25px auto;
+    text-align: left;
+    line-height: 35px;
+}
+
+.container-header { 
+    font-weight: 800;
+    font-size: 18px;
+    margin:10px 0;
+}
+
+.container-content { 
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+}
+
+
+ul.container-list li { 
+    list-style-position: inside;
+    list-style-type: disc;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* DATA COLLECTION */
+.data-collection {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:5px auto;
+}
+
+/* RIGHTS */
+.rights-div {
+    text-align: center;
+    margin:40px auto;
+}
+
+.rights-h1 {
+    font-weight: 500;
+    font-size:28px;
+    margin:5px 0;
+}
+
+.rights-h2 {
+    font-size:38px;
+    font-weight:800;
+    margin-bottom: 20px;
+}
+
+.rights-div div {
+    width:80%;
+    margin:auto;
+    background-color: var(--accentLightGreen);
+    padding:20px 15px;
+    border-radius: 10px;
+}
+
+.rights-div div p {
+    color:white;
+}
+
+.header { 
+    background-color: var(--accentLightGreen);
+    text-align: center;
+    padding:20px;
+}
+
+.header h3 {
+    color: var(--accentWhite);
+    font-size:20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding:15px;
+}
+
+.logo img {
+    max-width:6%;
+}
+
+/* BACK BUTTON */
+.back-button{
+    margin-left: 25vw;
+    margin-bottom: 2vw;
+}
+.back-button button {
+    padding: 10px;
+    width: 30%;
+    margin:10px 5px 0 0;
+    font-weight: 600;
+    font-size:15px;
+    border: 1px solid var(--accentGreen);
+    transition: 0.3s ease-in;
+}
+
+#disagree {
+    background-color: var(--accentWhite);
+    color: var(--accentGreen);
+}
+
+#agree{
+    background-color: var(--accentGreen);
+    color: var(--accentWhite);
+}
+
+#disagree:hover, #agree:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 5px #A4C19680;
+}
+
+
+@media only screen and (max-width: 1280px){
+    .container { 
+        max-width:1100px;
+    }
+
+    .logo img {
+        max-width:10%;
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+
+    .container {
+        max-width: 650px;
+    }
+
+    .logo img {
+        max-width: 15%;
+    }
+
+    .data-collection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-collection div {
+        margin-bottom:15px;
+    }
+
+    
+    ul.container-list li { 
+        width: 100%;
+        text-align: center;
+    }
+
+    .rights-div div {
+        width:90%;
+    }
+
+ 
+
+}
